@@ -2,37 +2,45 @@
 
 public class CommandosSoldiers
 {
-    public string name;
-    public string codeName;
-    public string[] tools = new string[5];
-    public string status;
+    public string Name { get; set; }
+    public string CodeName { get; set; }
+    public string[] Tools = new string[5];
+    public string Status;
 
-    public CommandosSoldiers(string name, string codeName, string[] tools, string status)
+    public CommandosSoldiers(string name, string codeName)
     {
-        this.name = name;
-        this.codeName = codeName;
-        if (tools.Length != 5)
-        {
+        this.Name = name;
+        this.CodeName = codeName;
+        this.Tools = new string[] { "Hammer", "Chisel", "Rope", "Watery", "Bag" };
+        this.Status = "Standing";
+    }
 
+    public string SayName(string commanderRank)
+    {
+        if(commanderRank == "General")
+        {
+            return Name;
+        }else if(commanderRank == "Colonel")
+        {
+            return CodeName;
         }
-        this.tools = tools;
-        this.status = status;
+        return "No access to data";
     }
 
     public void Walk()
     {
         Console.WriteLine("The soldier is walking.");
-        status = "Walking";
+        Status = "Walking";
     }
 
     public void Hide()
     {
         Console.WriteLine("The soldier is hiding.");
-        status = "Hide";
+        Status = "Hide";
     }
 
     public void Attack()
     {
-        Console.WriteLine($"Soldier {name} attacks");
+        Console.WriteLine($"Soldier {Name} attacks");
     }
 }

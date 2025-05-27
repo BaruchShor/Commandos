@@ -10,6 +10,11 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
+            CommandosSoldiers soldier = new CommandosSoldiers("Hershi", "Golani");
+            soldier.Attack();
+            soldier.CodeName = "killer";
+            Console.WriteLine(soldier.CodeName);
+
         }
     }
 }
