@@ -11,4 +11,9 @@ public class SeaCommando : CommandosSoldiers
     {
         Console.WriteLine($"The soldier {Name} is falling.");
     }
+
+    public override void Attack()
+    {
+        Console.WriteLine("Sea Commando Attack");
+    }
 }

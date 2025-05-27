@@ -10,11 +10,15 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
-            CommandosSoldiers soldier = new CommandosSoldiers("Hershi", "Golani");
-            soldier.Attack();
-            soldier.CodeName = "killer";
-            Console.WriteLine(soldier.CodeName);
-
+            CommandosSoldiers regularSoldier = new CommandosSoldiers("Hershi", "Golani");
+            SeaCommando seaSoldier = new SeaCommando("Baruch", "Shayetet");
+            AirCommando airSoldier = new AirCommando("Baruch", "Tzanchanim");
+            CommandosSoldiers[] soldiersArray = new CommandosSoldiers[3];
+            soldiersArray = new CommandosSoldiers[] { regularSoldier, seaSoldier, airSoldier };
+            foreach(CommandosSoldiers soldier in soldiersArray)
+            {
+                soldier.Attack();
+            }
         }
     }
 }

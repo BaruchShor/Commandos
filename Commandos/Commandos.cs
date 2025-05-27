@@ -39,7 +39,7 @@ public class CommandosSoldiers
         Status = "Hide";
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         Console.WriteLine($"Soldier {Name} attacks");
     }
