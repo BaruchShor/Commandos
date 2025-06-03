@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,7 +47,17 @@
     <Compile Include="AirCommando\AirCommando.cs" />
     <Compile Include="Commandos\Commandos.cs" />
     <Compile Include="Enemy\Enemy.cs" />
+    <Compile Include="Factory\CommandoFactory.cs" />
     <Compile Include="Factory\EnemyFactory.cs" />
+    <Compile Include="GetSoldiers\GetSoldiers.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\Commandos.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\Commandos.GlobalUsings.g.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net6.0\Commandos.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\net6.0\Commandos.GlobalUsings.g.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeaCommando\SeaCommando.cs" />
@@ -54,7 +65,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Commandos.csproj.nuget.dgspec.json" />
+    <None Include="obj\Commandos.csproj.nuget.g.props" />
+    <None Include="obj\Commandos.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\Commandos.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\net6.0\Commandos.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\Commandos.assets.cache" />
+    <None Include="obj\Debug\net6.0\Commandos.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\Commandos.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\Commandos.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\Commandos.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\net6.0\Commandos.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net6.0\Commandos.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\net6.0\Commandos.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="README.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="obj\Debug\Commandos.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net6.0\Commandos.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0\" />
+    <Folder Include="bin\Release\net6.0\" />
+    <Folder Include="obj\Debug\net6.0\refint\" />
+    <Folder Include="obj\Debug\net6.0\ref\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\net6.0\refint\" />
+    <Folder Include="obj\Release\net6.0\ref\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
